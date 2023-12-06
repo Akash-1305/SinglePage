@@ -6,22 +6,22 @@ function RegistrationForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-      event.preventDefault();
-    };
-  
+    const alert=()=>{
+      window.alert("You Have Registed Succesfully")
+    }
+
     return (
       <div className="registration-form">
-      <form onSubmit={handleSubmit}>    
+      <form>    
         < label htmlFor="firstName">First Name:</label>
         <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/>
 
         <label htmlFor="email">Email:</label>
-        <input type="email" placeholder="Last Name" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+        <input type="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required/>
 
         <label htmlFor="password">Password:</label>
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-        <button type="submit">Register</button>
+        <button onClick={alert}>Register</button>
       </form>
       </div>
     );
